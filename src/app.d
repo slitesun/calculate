@@ -1,15 +1,16 @@
 import std.stdio;
 import std.conv;
+import std.string;
  
 void main(){
   writeln("На данный момент поддерживается 4 типа операции: сложение, вычитание, умножение, деление. Введите тип операции");
-  string nameOperation = readln();
+  string nameOperation = readln.chomp;
   writeln("Тип выбранной операции: ", nameOperation);
  
-  writeln("Введите первую переменную");
+  writeln("Введите первое число");
   string a = readln();
  
-  writeln("Введите вторую переменную");
+  writeln("Введите второе число");
   string b = readln();
  
   //Преобразование переменных в тип integer
@@ -17,22 +18,22 @@ void main(){
   auto second = parse!int(b);
  
   switch(nameOperation){
-    case "+\n":
+    case "+":
       int result = first + second;
       writeln(result);
       break;
    
-    case "-\n":
+    case "-":
       int result = first - second;
       writeln(result);
       break;
    
-    case "*\n":
+    case "*":
       int result = first * second;
       writeln(result);
       break;
    
-    case "/\n":
+    case "/":
       int result = first / second;
       writeln(result);
       break;
