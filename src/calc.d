@@ -1,6 +1,6 @@
 module calc;
 
-int calc(string nameOperation, int first, int double){
+int calc(string nameOperation, int first, int second){
 ...//Work in progress
 
 }
