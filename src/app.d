@@ -1,7 +1,6 @@
 import std.stdio;
 import std.conv;
 import std.string;
-import calculate;
  
 void main(){
   writeln("На данный момент поддерживается 4 типа операции: сложение, вычитание, умножение, деление. Введите тип операции");
@@ -18,5 +17,28 @@ void main(){
   auto first = parse!double(a);
   auto second = parse!double(b);
  
- calculate();
+  double result;
+  
+  switch(nameOperation){
+    case "+":
+      result = first + second;
+      break;
+   
+    case "-":
+      result = first - second;
+      break;
+   
+    case "*":
+      result = first * second;
+      break;
+   
+    case "/":
+      result = first / second;
+      break;
+     
+    default:
+      writeln("Неверно выбран тип операции.");
+      break;
+    }
+  writeln(result);
 }
