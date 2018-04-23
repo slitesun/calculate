@@ -14,8 +14,8 @@ void main(){
   string b = readln();
  
   //Преобразование переменных в тип integer
-  auto first = parse!int(a);
-  auto second = parse!int(b);
+  auto first = parse!double(a);
+  auto second = parse!double(b);
  
  calculate();
 }
