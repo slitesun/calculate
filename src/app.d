@@ -14,7 +14,7 @@ void main(){
   writeln("Введите второе число");
   string b = readln();
  
-  //Преобразование переменных в тип integer
+  //Преобразование переменных в тип double
   auto first = parse!double(a);
   auto second = parse!double(b);
  
