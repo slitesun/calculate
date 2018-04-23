@@ -1,6 +1,6 @@
-module calc;
+module calculate;
 
-int calc(string nameOperation, int first, int second){
+int calculate(string nameOperation, int first, int second){
 ...//Work in progress
 
 }
