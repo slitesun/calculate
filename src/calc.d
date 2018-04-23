@@ -23,7 +23,7 @@ double calculate(string nameOperation, double first, double second){
       break;
      
     default:
-      writeln("Ошибка сравнения!");
+      writeln("Неверно выбран тип операции.");
       break;
   }
 }
