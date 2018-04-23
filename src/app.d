@@ -17,29 +17,5 @@ void main(){
   auto first = parse!int(a);
   auto second = parse!int(b);
  
-  switch(nameOperation){
-    case "+":
-      int result = first + second;
-      writeln(result);
-      break;
-   
-    case "-":
-      int result = first - second;
-      writeln(result);
-      break;
-   
-    case "*":
-      int result = first * second;
-      writeln(result);
-      break;
-   
-    case "/":
-      int result = first / second;
-      writeln(result);
-      break;
-     
-    default:
-      writeln("Ошибка сравнения!");
-      break;
-  }
+ calculate();
 }
