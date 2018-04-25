@@ -43,7 +43,8 @@ void main(){
         break;
       }
     writeln(result);
-  } else {
-      writeln("Неизвестный тип операции: ", nameOperation);
-    }
+  }
+  else{
+    writeln("Неизвестный тип операции: ", nameOperation);
+  }
 }
