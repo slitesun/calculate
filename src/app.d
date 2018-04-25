@@ -12,12 +12,10 @@ void main(){
  
     writeln("Введите первое число");
     string a = readln();
- 
+    auto first = parse!double(a);
+   
     writeln("Введите второе число");
     string b = readln();
- 
-    //Преобразование переменных в тип double
-    auto first = parse!double(a);
     auto second = parse!double(b);
  
     double result;
