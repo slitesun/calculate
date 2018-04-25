@@ -1,13 +1,13 @@
 import std.stdio:writeln, readln;
 import std.conv:parse;
 import std.string:chomp;
-import std.regex:matchAll;
+import std.regex:match;
  
 void main(){
   writeln("На данный момент поддерживается 4 типа операции: сложение, вычитание, умножение, деление. Введите тип операции");
   string nameOperation = readln.chomp;
   
-  if(nameOperation.matchAll("[-+*/]{1}")){
+  if(nameOperation.match("^[-+*/]&")){
     writeln("Тип выбранной операции: ", nameOperation);
  
     writeln("Введите первое число");
@@ -40,7 +40,6 @@ void main(){
         break;
      
       default:
-        writeln("Неверно выбран тип операции.");
         break;
       }
     writeln(result);
