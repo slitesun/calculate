@@ -11,8 +11,6 @@ void main(){
     writeln("Неизвестный тип операции: ", nameOperation);
       }
   else{
-       writeln("Тип выбранной операции: ", nameOperation);
- 
     writeln("Введите первое число");
     string a = readln();
     auto first = parse!double(a);
