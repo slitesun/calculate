@@ -9,7 +9,7 @@ void main(){
   
   if(!nameOperation.match("^[-+*/]&")){
     writeln("Неизвестный тип операции: ", nameOperation);
-      }
+  }
   else{
     writeln("Введите первое число");
     string a = readln();
