@@ -7,8 +7,11 @@ void main(){
   writeln("На данный момент поддерживается 4 типа операции: сложение, вычитание, умножение, деление. Введите тип операции");
   string nameOperation = readln.chomp;
   
-  if(nameOperation.match("^[-+*/]&")){
-    writeln("Тип выбранной операции: ", nameOperation);
+  if(!nameOperation.match("^[-+*/]&")){
+    writeln("Неизвестный тип операции: ", nameOperation);
+      }
+  else{
+       writeln("Тип выбранной операции: ", nameOperation);
  
     writeln("Введите первое число");
     string a = readln();
@@ -39,10 +42,6 @@ void main(){
      
       default:
         break;
-      }
-    writeln(result);
   }
-  else{
-    writeln("Неизвестный тип операции: ", nameOperation);
-  }
+   writeln(result);
 }
