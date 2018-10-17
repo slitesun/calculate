@@ -1,4 +1,4 @@
-package src;
+package learn;
 
 import java.math.BigDecimal;
 import java.util.Scanner;
