@@ -3,7 +3,7 @@ package src;
 import java.math.BigDecimal;
 import java.util.Scanner;
 
-public class Simple {
+public class Calculate {
     public static void main(String args[]) {
         Scanner operation = new Scanner(System.in);
         Scanner firstNumber = new Scanner(System.in);
