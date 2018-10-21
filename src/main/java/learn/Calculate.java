@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Calculate {
     public static void main(String args[]) {
         System.out.println("На данный момент поддерживается 4 типа операции: сложение, вычитание, умножение, деление. Введите тип операции: ");
-        String nameOperation = new Scanner(System.in).nextLine();
+        String nameOperation = new Scanner(System.in).nextLine().replaceAll("[\\s]", "");
         if (!nameOperation.matches("^[-+*/]$")) {
             System.out.println("Неизвестный тип операции: " + nameOperation);
             System.exit(0);
@@ -14,34 +14,35 @@ public class Calculate {
 
         try {
             System.out.println("Введите первое число: ");
-            BigDecimal firstBD = new BigDecimal(Double.parseDouble(new Scanner(System.in).nextLine()));
+            BigDecimal first = new BigDecimal(Double.parseDouble(new Scanner(System.in).nextLine()));
 
             System.out.println("Введите второе число: ");
-            BigDecimal secondDB = new BigDecimal(Double.parseDouble(new Scanner(System.in).nextLine()));
+            BigDecimal second = new BigDecimal(Double.parseDouble(new Scanner(System.in).nextLine()));
 
-            BigDecimal resultDB = new BigDecimal(0);
+            BigDecimal result = new BigDecimal(0);
 
             switch (nameOperation) {
                 case "+":
-                    resultDB = firstBD.add(secondDB);
+                    result = first.add(second);
                     break;
 
                 case "-":
-                    resultDB = firstBD.subtract(secondDB);
+                    result = first.subtract(second);
                     break;
 
                 case "*":
-                    resultDB = firstBD.multiply(secondDB);
+                    result = first.multiply(second);
                     break;
 
                 case "/":
-                    resultDB = firstBD.divide(secondDB, 1, BigDecimal.ROUND_DOWN);
+                    result = first.divide(second, 1, BigDecimal.ROUND_DOWN);
                     break;
 
                 default:
                     break;
             }
-            System.out.println("Ответ: " + resultDB.setScale(2, BigDecimal.ROUND_DOWN));
+            System.out.println("Ответ: " + result.setScale(2, BigDecimal.ROUND_DOWN));
+
         } catch (ArithmeticException e) {
             System.out.println("Анус свой подели на ноль пёс");
         } catch (NumberFormatException e){
